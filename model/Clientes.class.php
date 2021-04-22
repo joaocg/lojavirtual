@@ -118,6 +118,13 @@ class Clientes extends Conexao {
 
 	}
 
+    public static function dateEmMysql($dateSql){
+        $ano= substr($dateSql, 6);
+        $mes= substr($dateSql, 3,-5);
+        $dia= substr($dateSql, 0,-8);
+        return $ano."-".$mes."-".$dia;
+    }
+
 	/*Função para inserir os clientes, 2 verificações Ver se o CPF já existe, e se já não tem o e-mail no BD*/
 	function Inserir() {
 		/*Se encontrar mais que 1 registro no banco de CPF, informa que CPF já existe*/
@@ -144,23 +151,23 @@ class Clientes extends Conexao {
 		/*query para inserir clientes[...]
 			              Insira na tabela(campos da tabela)
 		*/
-		$query = " INSERT INTO {$this->prefix}clientes (cli_nome, cli_sobrenome,cli_data_nasc,cli_rg,";
-		$query .= " cli_cpf, cli_ddd,cli_fone,cli_celular ,cli_endereco ,cli_numero,cli_bairro ,";
-		$query .= " cli_cidade ,cli_uf ,cli_cep ,cli_email ,cli_data_cad, cli_hora_cad, cli_pass)";
+		$query = " INSERT INTO {$this->prefix}clientes (cli_nome, cli_sobrenome, cli_data_nasc, cli_rg,";
+		$query .= " cli_cpf, cli_ddd, cli_fone, cli_celular, cli_endereco, cli_numero, cli_bairro ,";
+		$query .= " cli_cidade, cli_uf, cli_cep, cli_email, cli_data_cad, cli_hora_cad, cli_pass)";
 
 		/*Nos valores
         */
 		$query .= " VALUES ";
-		$query .= " (:cli_nome, :cli_sobrenome,:cli_data_nasc,:cli_rg,";
-		$query .= " :cli_cpf, :cli_ddd,:cli_fone,:cli_celular ,:cli_endereco ,:cli_numero,:cli_bairro ,";
-		$query .= " :cli_cidade ,:cli_uf ,:cli_cep ,:cli_email ,:cli_data_cad, :cli_hora_cad, :cli_senha)";
+		$query .= " ( :cli_nome, :cli_sobrenome, :cli_data_nasc, :cli_rg,";
+		$query .= " :cli_cpf, :cli_ddd, :cli_fone, :cli_celular, :cli_endereco, :cli_numero, :cli_bairro,";
+		$query .= "  :cli_cidade, :cli_uf, :cli_cep, :cli_email, :cli_data_cad, :cli_hora_cad, :cli_senha )";
 
 		/*Os dados abaixo
         */
 		$params = array(
 			':cli_nome' => $this->getCli_nome(),
 			':cli_sobrenome' => $this->getCli_sobrenome(),
-			':cli_data_nasc' => $this->getCli_data_nasc(),
+			':cli_data_nasc' => $this->dateEmMysql($this->getCli_data_nasc()),
 			':cli_rg' => $this->getCli_rg(),
 			':cli_cpf' => $this->getCli_cpf(),
 			':cli_ddd' => $this->getCli_ddd(),
@@ -183,7 +190,9 @@ class Clientes extends Conexao {
 //        var_dump($query);
 //        var_dump($params);
 //        exit;
+
 		$this->ExecuteSQL($query, $params);
+
 
 	}
 
