@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 22, 2021 at 01:36 PM
+-- Generation Time: Apr 22, 2021 at 03:26 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -26,6 +26,13 @@ CREATE TABLE `ljb_categorias` (
                                   `cate_slug` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `ljb_categorias`
+--
+
+INSERT INTO `ljb_categorias` (`cate_id`, `cate_nome`, `cate_slug`) VALUES
+(1, 'Softweares', 'softweares');
+
 -- --------------------------------------------------------
 
 --
@@ -34,25 +41,32 @@ CREATE TABLE `ljb_categorias` (
 
 CREATE TABLE `ljb_clientes` (
                                 `cli_id` int(11) UNSIGNED NOT NULL,
-                                `cli_nome` varchar(255) NOT NULL,
-                                `cli_sobrenome` varchar(255) NOT NULL,
-                                `cli_endereco` varchar(255) NOT NULL,
-                                `cli_numero` varchar(255) NOT NULL,
-                                `cli_bairro` varchar(255) NOT NULL,
-                                `cli_cidade` varchar(255) NOT NULL,
-                                `cli_uf` varchar(255) NOT NULL,
-                                `cli_cep` varchar(255) NOT NULL,
-                                `cli_cpf` varchar(255) NOT NULL,
-                                `cli_rg` varchar(255) NOT NULL,
-                                `cli_ddd` int(2) NOT NULL,
-                                `cli_fone` varchar(255) NOT NULL,
-                                `cli_celular` varchar(255) NOT NULL,
-                                `cli_email` varchar(255) NOT NULL,
-                                `cli_pass` varchar(255) NOT NULL,
-                                `cli_data_nasc` date NOT NULL,
-                                `cli_data_cad` date NOT NULL,
-                                `cli_hora_cad` time NOT NULL
+                                `cli_nome` varchar(255) DEFAULT NULL,
+                                `cli_sobrenome` varchar(255) DEFAULT NULL,
+                                `cli_endereco` varchar(255) DEFAULT NULL,
+                                `cli_numero` varchar(255) DEFAULT NULL,
+                                `cli_bairro` varchar(255) DEFAULT NULL,
+                                `cli_cidade` varchar(255) DEFAULT NULL,
+                                `cli_uf` varchar(255) DEFAULT NULL,
+                                `cli_cep` varchar(255) DEFAULT NULL,
+                                `cli_cpf` varchar(255) DEFAULT NULL,
+                                `cli_rg` varchar(255) DEFAULT NULL,
+                                `cli_ddd` int(2) DEFAULT NULL,
+                                `cli_fone` varchar(255) DEFAULT NULL,
+                                `cli_celular` varchar(255) DEFAULT NULL,
+                                `cli_email` varchar(255) DEFAULT NULL,
+                                `cli_pass` varchar(255) DEFAULT NULL,
+                                `cli_data_nasc` date DEFAULT NULL,
+                                `cli_data_cad` date DEFAULT NULL,
+                                `cli_hora_cad` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ljb_clientes`
+--
+
+INSERT INTO `ljb_clientes` (`cli_id`, `cli_nome`, `cli_sobrenome`, `cli_endereco`, `cli_numero`, `cli_bairro`, `cli_cidade`, `cli_uf`, `cli_cep`, `cli_cpf`, `cli_rg`, `cli_ddd`, `cli_fone`, `cli_celular`, `cli_email`, `cli_pass`, `cli_data_nasc`, `cli_data_cad`, `cli_hora_cad`) VALUES
+(1, 'João Coelho', 'Garcias Neto', 'Aen', 'sddsf', 'sdfsd', 'sdfsd', 'CE', '63180', '033330', '20202', 88, '99999', '99999', 'xjogos@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2021-04-22', '2021-04-22', '15:09:31');
 
 -- --------------------------------------------------------
 
@@ -122,23 +136,30 @@ CREATE TABLE `ljb_pedidos_itens` (
 
 CREATE TABLE `ljb_produtos` (
                                 `pro_id` int(11) UNSIGNED NOT NULL,
-                                `pro_categoria` int(11) NOT NULL,
-                                `pro_nome` varchar(255) NOT NULL,
-                                `pro_desc` text NOT NULL,
-                                `pro_peso` double(10,2) NOT NULL,
-  `pro_valor` double(10,2) NOT NULL,
-  `pro_altura` int(11) NOT NULL,
-  `pro_largura` int(11) NOT NULL,
-  `pro_comprimento` int(11) NOT NULL,
-  `pro_img` varchar(255) NOT NULL,
-  `pro_slug` varchar(255) NOT NULL,
-  `pro_estoque` int(11) NOT NULL,
-  `pro_modelo` varchar(255) NOT NULL,
-  `pro_ref` varchar(255) NOT NULL,
-  `pro_fabricante` int(11) NOT NULL,
-  `pro_ativo` varchar(255) NOT NULL,
-  `pro_frete_free` varchar(255) NOT NULL
+                                `pro_categoria` int(11) DEFAULT NULL,
+                                `pro_nome` varchar(255) DEFAULT NULL,
+                                `pro_desc` text,
+                                `pro_peso` double(10,2) DEFAULT NULL,
+  `pro_valor` double(10,2) DEFAULT NULL,
+  `pro_altura` int(11) DEFAULT NULL,
+  `pro_largura` int(11) DEFAULT NULL,
+  `pro_comprimento` int(11) DEFAULT NULL,
+  `pro_img` varchar(255) DEFAULT NULL,
+  `pro_slug` varchar(255) DEFAULT NULL,
+  `pro_estoque` int(11) DEFAULT NULL,
+  `pro_modelo` varchar(255) DEFAULT NULL,
+  `pro_ref` varchar(255) DEFAULT NULL,
+  `pro_fabricante` int(11) DEFAULT NULL,
+  `pro_ativo` varchar(255) DEFAULT NULL,
+  `pro_frete_free` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ljb_produtos`
+--
+
+INSERT INTO `ljb_produtos` (`pro_id`, `pro_categoria`, `pro_nome`, `pro_desc`, `pro_peso`, `pro_valor`, `pro_altura`, `pro_largura`, `pro_comprimento`, `pro_img`, `pro_slug`, `pro_estoque`, `pro_modelo`, `pro_ref`, `pro_fabricante`, `pro_ativo`, `pro_frete_free`) VALUES
+(1, 1, 'BPMN', '<p>Descri&ccedil;&atilde;o</p>', 4.00, 9000000.00, 3, 2, 2, '210422151939whatsapp-image-2021-04-22-at-08.53.48.png.png', 'bpmn', 20000, '3.3', '4343', NULL, 'SIM', NULL);
 
 -- --------------------------------------------------------
 
@@ -147,11 +168,18 @@ CREATE TABLE `ljb_produtos` (
 --
 
 CREATE TABLE `ljb_users` (
-                             `user_id` int(11) NOT NULL,
+                             `user_id` int(11) UNSIGNED NOT NULL,
                              `user_nome` varchar(255) NOT NULL,
                              `user_email` varchar(255) NOT NULL,
                              `user_pw` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ljb_users`
+--
+
+INSERT INTO `ljb_users` (`user_id`, `user_nome`, `user_email`, `user_pw`) VALUES
+(1, 'João', 'xjogos@gmail.com', '25d55ad283aa400af464c76d713c07ad');
 
 --
 -- Indexes for dumped tables
@@ -202,6 +230,12 @@ ALTER TABLE `ljb_produtos`
     ADD PRIMARY KEY (`pro_id`);
 
 --
+-- Indexes for table `ljb_users`
+--
+ALTER TABLE `ljb_users`
+    ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -209,7 +243,7 @@ ALTER TABLE `ljb_produtos`
 -- AUTO_INCREMENT for table `ljb_categorias`
 --
 ALTER TABLE `ljb_categorias`
-    MODIFY `cate_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `cate_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ljb_clientes`
@@ -245,7 +279,13 @@ ALTER TABLE `ljb_pedidos_itens`
 -- AUTO_INCREMENT for table `ljb_produtos`
 --
 ALTER TABLE `ljb_produtos`
-    MODIFY `pro_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `pro_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ljb_users`
+--
+ALTER TABLE `ljb_users`
+    MODIFY `user_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
