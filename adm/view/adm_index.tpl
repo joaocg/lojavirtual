@@ -198,7 +198,7 @@
             <div class="row" id="rodape">
                 <center>
                     <h4>{$TITULO_SITE}</h4>
-                    <P>All Rights Reserved <b>Blue Company<b> - Desenvolvido por Vinícius Manara - Data atual: {$DATA}</P>
+                    <P>All Rights Reserved <b>Blue Company<b> - Desenvolvido por João Coelho - Data atual: {$DATA}</P>
                 </center>
             
             </div><!-- fim div rodape-->
