@@ -57,8 +57,13 @@
                             <ul class="nav navbar-nav navbar-right">
                                {if $LOGADO == true}
                                 <li>
-                            Olá: {$USER} <a href="{$PAG_LOGOFF}" class="btn btn-info"><i class="glyphicon glyphicon-log-out"></i> Sair </a>
+                                    <a href="#" class="">
+                            Olá: {$USER}
+                                    </a>
                                 </li>
+                                   <li>
+                                       <a href="{$PAG_LOGOFF}" class=""><i class="glyphicon glyphicon-log-out"></i> Sair </a>
+                                   </li>
                                     {/if}
 
                             </ul>
