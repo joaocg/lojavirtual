@@ -18,7 +18,7 @@ class User extends Conexao{
         
         $this->setEmail($email);
         
-        $query = " SELECT * FROM {$this->prefix}user WHERE user_email = :email ";
+        $query = " SELECT * FROM {$this->prefix}users WHERE user_email = :email ";
         
         $params = array(':email'=>  $this->getEmail());
         
@@ -37,7 +37,7 @@ class User extends Conexao{
         $this->setSenha($senha);
         $this->setEmail($email);
         // montando a SQL
-        $query = "UPDATE {$this->prefix}user SET user_pw = :senha";
+        $query = "UPDATE {$this->prefix}users SET user_pw = :senha";
         $query.= " WHERE user_email = :email";
         // passando parametros
         $params = array(':senha' => $this->getSenha(), ':email' => $this->getEmail());

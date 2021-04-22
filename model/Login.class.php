@@ -66,7 +66,7 @@ class Login extends Conexao {
 		$this->setUser($user);
 		$this->setSenha($senha);
 
-		$query = "SELECT * FROM {$this->prefix}user WHERE user_email = :email AND user_pw = :senha";
+		$query = "SELECT * FROM {$this->prefix}users WHERE user_email = :email AND user_pw = :senha";
 
 		$params = array(':email' => $this->getUser(),
 			':senha' => $this->getSenha());
@@ -74,6 +74,9 @@ class Login extends Conexao {
 		$this->ExecuteSQL($query, $params);
 
 		// caso o login seja efetivado com exito
+
+        print_r($this->TotalDados());
+
 		if ($this->TotalDados() > 0):
 
 			$lista = $this->ListarDados();
