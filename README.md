@@ -12,3 +12,9 @@ Com os dados em mão execute o arquivo db.sql na database.
 Acesse: Model/Config.class.php e modifique as configurações do banco conforme o banco criado no passo anterior.
 
 Agora basta acessar a URL de sua loja.
+
+# usuários demo
+
+Cliente: 
+Usuário: xjogos@gmail.com
+Senha: 12345678
