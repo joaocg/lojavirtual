@@ -8,7 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.htaccessOLD2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FONTES DO PROJETO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/0e45796eebcc14cc131c346741e1130a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/55ee4ce641cdbc2154979a4ef88461fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/5cbced259368ca87d5334b8979a0e650" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/659a8dbd584168f2ed59cff68c193920" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/8e4a6850f6b91d39505863d06f7bf7a5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/a79722dd872072651b1235fc9fdba9aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/.phpintel/index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/adm/controller/adm_clientes_editar.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm/controller/adm_clientes_editar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adm/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/adm/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adm/view/adm_index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/adm/view/adm_index.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.phar" beforeDir="false" />
@@ -16,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/composerUpdate.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/cadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/cadastro.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/envio.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/envio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/frete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/frete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/autoload.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/composer/ClassLoader.php" beforeDir="false" />
@@ -444,7 +454,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619004821018</updated>
-      <workItem from="1619004822957" duration="6495000" />
+      <workItem from="1619004822957" duration="6930000" />
     </task>
     <servers />
   </component>

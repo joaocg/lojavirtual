@@ -1,6 +1,6 @@
 <?php
 
-require_once '../lib/autoload.php';
+require_once '../vendor/autoload.php';
 
 //instancio a classe correios
 $destino = $_GET['cepcliente'];

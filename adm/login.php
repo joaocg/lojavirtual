@@ -7,7 +7,7 @@ if (!isset($_SESSION)) {
 
 }
 
-require '../lib/autoload.php';
+require '../vendor/autoload.php';
 
 $smarty = new Template();
 

@@ -18,7 +18,7 @@ if(!isset($_SESSION['PED']['ref'])){
 }
 */
 
-require '../lib/autoload.php';
+require '../vendor/autoload.php';
 
 if(!Login::LogadoADM()){
 	Rotas::Redirecionar(1, 'login.php');
