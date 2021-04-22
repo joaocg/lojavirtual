@@ -1,5 +1,5 @@
 <?php
-class Itens extends Conexao {
+class ItensPedido extends Conexao {
 
 	private $total_valor;
 
